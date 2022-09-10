@@ -7,17 +7,21 @@
  */
 int main(void)
 {
-	char c;
-	char d = '0';
+	int digit;
 
-	while (d <= '9');
+	for (digit = '0'; digit <= '9'; digit++)
 	{
-		putchar(d);
-		d++;
-	}
-	for (c = 'a'; c <= 'f'; c++)
-	{
-		putchar(c);
+
+		putchar(digit);
+		if (digit == '9')
+		{
+			digit = 'a';
+			for (; digit <= 'f'; digit++)
+			{
+				putchar(digit);
+			}
+			break;
+		}
 	}
 	putchar('\n');
 	return (0);
